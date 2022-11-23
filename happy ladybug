@@ -1,0 +1,33 @@
+def happyLadybugs(b):
+   
+    d={}
+    underscore=False
+    for bi in b:
+        if bi=="_":
+            underscore=True
+        else:
+            if bi in d:
+                d[bi]+=1
+            else:
+                d[bi]=1
+    if underscore:
+        for bi in d:
+            if d[bi]==1:
+                return "NO"
+        else:
+            return "YES"
+    else:
+        if n==1:
+            return "NO"
+        else:
+            if b[0]!=b[1]:
+                return "NO"
+            else:
+                for i in range(1,n-1):
+                    if b[i-1]!=b[i] and b[i+1]!=b[i]:
+                        return "NO"
+                else:
+                    if b[-1]!=b[-2]:
+                        return "NO"
+                    else:
+                        return "YES"
